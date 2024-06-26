@@ -1,0 +1,32 @@
+{
+    "name": "acf/all-posts",
+    "title": "All posts",
+    "description": "A custom All posts block.",
+    "style": "file:/all-posts.css",
+    "script": "block-all-posts",
+    "category": "theme",
+    "icon": "admin-comments",
+    "keywords": ["all posts"],
+    "supports": {
+        "align": true,
+        "anchor": true,
+        "alignContent": true,
+        "color": {
+            "text": false,
+            "background": true,
+            "link": false
+        },
+        "spacing": {
+            "margin": true,
+            "padding": true,
+            "blockGap": true
+        },
+        "alignText": true,
+        "fullHeight": true
+    },
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "all-posts.php"
+    }
+
+}

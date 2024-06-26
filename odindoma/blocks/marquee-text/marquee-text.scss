@@ -1,0 +1,114 @@
+.marquee-text {
+  position: sticky;
+  top: 0;
+  padding: 10px 0 6px 0;
+  background-color: var(--wp--preset--color--invisible-grey);
+  z-index: 9999;
+  transform: translateY(-38px);
+  transition: 0.5s;
+  display: none;
+
+  .scrolling-text-container {
+    overflow: hidden;
+
+    .scrolling-text-inner {
+      display: flex;
+      white-space: nowrap;
+      font-family: var(--wp--preset--font-family--loos-wide);
+      font-size: 18px;
+      line-height: 18px;
+      color: var(--wp--preset--color--just-black);
+      text-decoration: none;
+      padding: 5px 0;
+
+      .scrolling-text {
+        display: flex;
+        animation: scroll-left 20s linear infinite;
+
+        .scrolling-text-item {
+          padding: 0 20px;
+          
+          .tg {
+            color: #1D98DC;
+            position: relative;
+            margin-left: 18px;
+            //display: inline-flex;
+            //align-items: center;
+
+            &::before {
+              content: "";
+              position: absolute;
+              display: inline-block;
+              width: 15px;
+              height: 15px;
+              background: url(../../assets/images/telegram-marquee.svg);
+              left: -18px;
+              bottom: 2px;
+            }
+
+            &::after {
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 1px;
+              background-color: #1D98DC;
+              left: 0;
+              bottom: 1px;
+            }
+          }
+        }
+      }
+
+      &:hover {
+        color: #1D98DC;
+
+        .scrolling-text {
+          .scrolling-text-item {
+            .tg {
+              &::after {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.visible {
+    transform: translateY(0);
+    transition: 0.3s;
+  }
+
+  &.active {
+    display: block;
+  }
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .marquee-text {
+    padding-top: 4px;
+  }
+}
+
+@-moz-document url-prefix() {
+  .marquee-text .scrolling-text-container .scrolling-text-inner .scrolling-text .scrolling-text-item .tg::before {
+    bottom: 2px !important;
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  .marquee-text .scrolling-text-container .scrolling-text-inner .scrolling-text .scrolling-text-item .tg::before {
+    bottom: 5px;
+  } 
+}

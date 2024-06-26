@@ -1,0 +1,100 @@
+.table-3-cols {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.table-3-cols .heading {
+	text-transform: uppercase;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0.08em;
+	border-bottom: 2px solid var(--wp--preset--color--just-black);
+	margin: 0;
+	width: 100%;
+	max-width: unset;
+}
+
+.table-3-cols .rows {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding-right: 48px;
+}
+
+.table-3-cols .rows .row {
+	display: flex;
+	gap: 48px;
+	font-size: 16px;
+	line-height: 20px;
+	min-height: 40px;
+}
+
+.table-3-cols .rows .row .text-left {
+	flex: 1;
+	max-width: 150px;
+}
+
+.table-3-cols .rows .row .text-center {
+	flex: 1;
+	max-width: 467px;
+}
+
+.table-3-cols .rows .row .text-right {
+	flex: 1;
+	max-width: 200px;
+}
+
+@media screen and (max-width: 991px) {
+	.table-3-cols .rows {
+		padding-right: 0;
+	}
+
+	.table-3-cols .rows .row {
+		gap: 24px;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.table-3-cols {
+		gap: 8px;
+	}
+
+	.table-3-cols .heading {
+		font-size: 12px;
+	}
+
+	.table-3-cols .rows {
+		gap: 8px;
+	}
+
+	.table-3-cols .rows .row {
+		font-size: 14px;
+		line-height: 18px;
+		flex-direction: column;
+		gap: 0;
+		padding-bottom: 16px;
+		border-bottom: 2px solid var(--wp--preset--color--just-black);
+	}
+
+	.table-3-cols .rows .row .text-left {
+		order: 1;
+		max-width: unset;
+	}
+
+	.table-3-cols .rows .row .text-right {
+		order: 2;
+		margin-bottom: 10px;
+		max-width: unset;
+	}
+
+	.table-3-cols .rows .row .text-center {
+		order: 3;
+		max-width: unset;
+	}
+
+	.table-3-cols .rows .row:last-child {
+		border: none;
+	}
+}

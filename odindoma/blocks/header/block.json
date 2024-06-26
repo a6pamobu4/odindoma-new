@@ -1,0 +1,32 @@
+{
+    "name": "acf/header",
+    "title": "Header",
+    "description": "A custom Header block.",
+    "style": "file:/header.css",
+    "script": "block-header",
+    "category": "theme",
+    "icon": "admin-comments",
+    "keywords": ["header"],
+    "supports": {
+        "align": true,
+        "anchor": true,
+        "alignContent": true,
+        "color": {
+            "text": false,
+            "background": true,
+            "link": false
+        },
+        "spacing": {
+            "margin": true,
+            "padding": true,
+            "blockGap": true
+        },
+        "alignText": true,
+        "fullHeight": true
+    },
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "header.php"
+    }
+
+}

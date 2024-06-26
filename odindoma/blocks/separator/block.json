@@ -1,0 +1,32 @@
+{
+    "name": "acf/separator",
+    "title": "Разделитель",
+    "description": "Разделитель между секциями",
+    "style": "file:/separator.css",
+    "script": "block-separator",
+    "category": "theme",
+    "icon": "admin-comments",
+    "keywords": ["separator", "разделитель"],
+    "supports": {
+        "align": true,
+        "anchor": true,
+        "alignContent": true,
+        "color": {
+            "text": false,
+            "background": true,
+            "link": false
+        },
+        "spacing": {
+            "margin": true,
+            "padding": true,
+            "blockGap": true
+        },
+        "alignText": true,
+        "fullHeight": true
+    },
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "separator.php"
+    }
+
+}

@@ -1,0 +1,32 @@
+{
+    "name": "acf/custom-posts-grid",
+    "title": "Custom posts grid",
+    "description": "A custom Posts grid.",
+    "style": "file:/custom-posts-grid.css",
+    "script": "block-custom-posts-grid",
+    "category": "theme",
+    "icon": "admin-comments",
+    "keywords": ["posts", "grid"],
+    "supports": {
+        "align": true,
+        "anchor": true,
+        "alignContent": true,
+        "color": {
+            "text": false,
+            "background": true,
+            "link": false
+        },
+        "spacing": {
+            "margin": true,
+            "padding": true,
+            "blockGap": true
+        },
+        "alignText": true,
+        "fullHeight": true
+    },
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "custom-posts-grid.php"
+    }
+
+}

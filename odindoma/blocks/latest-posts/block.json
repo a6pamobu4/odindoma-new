@@ -1,0 +1,32 @@
+{
+    "name": "acf/latest-posts",
+    "title": "Latest posts",
+    "description": "A custom Latest posts block.",
+    "style": "file:/latest-posts.css",
+    "script": "block-latest-posts",
+    "category": "theme",
+    "icon": "admin-comments",
+    "keywords": ["latest posts"],
+    "supports": {
+        "align": true,
+        "anchor": true,
+        "alignContent": true,
+        "color": {
+            "text": false,
+            "background": true,
+            "link": false
+        },
+        "spacing": {
+            "margin": true,
+            "padding": true,
+            "blockGap": true
+        },
+        "alignText": true,
+        "fullHeight": true
+    },
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "latest-posts.php"
+    }
+
+}

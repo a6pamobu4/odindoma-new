@@ -1,0 +1,491 @@
+@charset "UTF-8";
+/*
+Theme Name: Odin Doma
+Author: Ilia Antonovich
+Description: Custom theme for odindoma.media
+Version: 0.2
+Tested up to: 6.3.2
+*/
+body {
+	font-family: var(--wp--preset--font-family--loos);
+	font-size: 16px;
+	color: var(--wp--preset--color--just-black);
+	background-color: var(--wp--preset--color--invisible-grey);
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-smooth: never;
+	-webkit-text-size-adjust: none;
+}
+
+h1,
+h2,
+h3 {
+	font-weight: 400;
+	/*margin: 0;*/
+}
+
+h1 {
+	font-family: var(--wp--preset--font-family--loos-wide);
+	font-size: 62px;
+	line-height: 58px;
+}
+
+h2 {
+	font-family: var(--wp--preset--font-family--loos-wide);
+	font-size: 28px;
+	line-height: 28px;
+}
+
+a {
+	transition: 0.3s;
+}
+
+a.black-underline {
+	color: var(--wp--preset--color--just-black);
+	text-decoration: underline;
+}
+
+a.black-underline:hover {
+	color: #666666;
+}
+
+.telegram a {
+	display: flex;
+	gap: 10px;
+	padding: 12px 12px 10px;
+}
+
+.telegram a::before {
+	content: "";
+	position: relative;
+	width: 23px;
+	height: 20px;
+	background: url(assets/images/telegram-a.svg);
+}
+
+.telegram a:hover::before {
+	filter: invert(40%) sepia(0%) saturate(0%) hue-rotate(59deg) brightness(97%) contrast(90%);
+}
+
+.no-decoration a {
+	text-decoration: none !important;
+}
+
+img {
+	line-height: 0;
+	width: 100%;
+	height: auto;
+}
+
+img.emoji {
+	width: 1em;
+	height: 1em;
+}
+
+ul {
+	margin: 0;
+	padding-left: 24px;
+	list-style: none;
+}
+
+ul li:not(:last-child) {
+	margin-bottom: 6px;
+}
+
+main {
+	max-width: 1320px;
+	padding: 24px 40px 0;
+	margin-left: 240px;
+}
+
+.is-desktop-preview {
+	max-width: 1320px;
+	padding: 24px 40px 0;
+	margin: 0 auto;
+}
+
+.is-tablet-preview {
+	padding: 0 40px;
+}
+
+.is-mobile-preview {
+	padding: 0 24px;
+}
+
+:where(.wp-site-blocks) > * {
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+
+:where(body .is-layout-flow) > * {
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+
+:where(body .is-layout-constrained) > * {
+	margin-block-start: 0;
+}
+
+.wp-site-blocks {
+	position: relative;
+	max-width: 1560px;
+	margin: 0 auto;
+}
+
+.wp-block-spacer {
+	margin: 0;
+}
+
+.wp-element-button {
+	color: var(--wp--preset--color--just-black);
+	border: 2px solid var(--wp--preset--color--just-black);
+	padding: 12px 12px 10px;
+	font-size: 23px;
+	line-height: 22px;
+	font-family: var(--wp--preset--font-family--loos-wide);
+	text-decoration: none;
+	background: transparent;
+	border-radius: 0;
+}
+
+.wp-element-button:hover {
+	color: #666666;
+	border-color: #666666;
+}
+
+.m-neg24 {
+	margin: 0 -24px;
+}
+
+.m-left-neg24 {
+	margin-left: -24px;
+}
+
+.hide {
+	display: none !important;
+}
+
+.show-mobile {
+	display: none !important;
+}
+
+/*.single,
+.post-type-post {
+	.entry-content {
+		margin-top: 0;
+	}
+
+	h1 {
+		font-family: var(--wp--preset--font-family--loos-wide);
+		//font-family: "Loos Ex Wd Reg";
+		font-size: 62px;
+		line-height: 58px;
+	}
+
+	h2 {
+		font-family: var(--wp--preset--font-family--loos-wide);
+		font-size: 28px;
+		line-height: 28px;
+		margin: 32px 0 14px !important;
+		max-width: 645px;
+	}
+
+	p {
+		max-width: 645px;
+		font-size: 22px;
+		line-height: 27px;
+		margin: 0 0 14px;
+
+		a {
+			color: var(--wp--preset--color--just-black);			
+
+			&:visited {
+				color: var(--wp--preset--color--just-black);
+			}
+
+			&:hover {
+				color: #666666;
+			}
+
+			&.with-image {
+				&::before {
+				content: "";
+				display: inline-block;
+				position: relative;
+				width: 22px;
+				height: 22px;
+				background-image: url(assets/images/emoji-chain.png);
+				background-size: cover;
+				}
+			}			
+		}
+	}
+
+	ul {
+		font-size: 22px;
+		line-height: 27px;
+
+		&.list-with-dash {
+			li {
+				display: flex;
+				gap: 5px;
+
+				&:before {
+					content: "—";
+					display: inline-block;
+				}
+			}
+		}
+	}
+
+	.list-with-dash {
+		ul {
+			li {
+				display: flex;
+				gap: 5px;
+
+				&:before {
+					content: "—";
+					display: inline-block;
+				}
+			}
+		}
+	}
+
+	ol {
+		font-size: 22px;
+		line-height: 27px;
+		padding-left: 32px;
+		max-width: 645px;
+
+		li:not(:last-child) {
+			margin-bottom: 14px;
+		}
+	}
+}
+
+.page:not(.home) {
+	p {
+		font-size: 22px;
+		line-height: 27px;
+		margin: 0 0 14px;
+	}
+}*/
+.post-youtube {
+	width: 306px !important;
+	height: 547px !important;
+}
+
+.post-youtube iframe {
+	width: 306px !important;
+	height: 547px !important;
+}
+
+.privacy-policy .policy {
+	display: none;
+}
+
+.show-laptop {
+	display: none !important;
+}
+
+.page-template-lp .wp-site-blocks {
+	position: relative;
+	max-width: none;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.page-template-lp main {
+	padding: 16px 0 0 !important;
+	margin: 0;
+	max-width: none;
+}
+
+.page-template-lp h2 {
+	font-size: 34px;
+	line-height: 31px;
+}
+
+.page-template-lp .lp-button a {
+	font-size: 18px;
+	line-height: 26px;
+	gap: 4px;
+	align-items: center;
+}
+
+.page-template-lp .lp-button a::before {
+	transform: scale(0.8);
+}
+
+@media screen and (max-width: 1279px) {
+	.wp-site-blocks {
+		padding: 0 40px;
+	}
+
+	.show-laptop {
+		display: flex !important;
+	}
+
+	.hide-laptop {
+		display: none !important;
+	}
+
+	main {
+		padding: 24px 0 0;
+		margin-left: 0;
+	}
+
+	.page-template-lp .wp-site-blocks {
+		padding: 0;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	h1 {
+		font-size: 54px;
+		line-height: 54px;
+	}
+
+	.single h1,
+  .post-type-post h1 {
+		font-size: 54px;
+		line-height: 54px;
+	}
+
+	.page-template-lp .wp-site-blocks {
+		padding: 0 24px;
+		width: auto;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.wp-site-blocks {
+		padding: 0 24px;
+		max-width: 512px;
+	}
+
+	.hide-mobile {
+		display: none !important;
+	}
+
+	.show-mobile {
+		display: block !important;
+	}
+
+	h1 {
+		font-size: 30px;
+		line-height: 29px;
+	}
+
+	h2 {
+		font-size: 21px;
+		line-height: 24px;
+		margin: 24px 0 12px;
+	}
+
+	ul {
+		font-size: 17px;
+		line-height: 22px;
+	}
+
+	p {
+		font-size: 17px;
+		line-height: 22px;
+	}
+
+	.p-mobile {
+		font-size: 17px !important;
+		line-height: 22px !important;
+		font-family: var(--wp--preset--font-family--loos) !important;
+	}
+
+	.mobile-margin-top-16 {
+		margin-top: 16px !important;
+	}
+
+	.mobile-margin-bottom-48 {
+		margin-bottom: 48px !important;
+	}
+
+	.mobile-margin-bottom-80 {
+		margin-bottom: 80px !important;
+	}
+
+	.mobile-height-48 {
+		height: 48px !important;
+	}
+
+	a::before {
+		width: 17px;
+		height: 17px;
+	}
+
+	.single h1,
+  .post-type-post h1 {
+		font-size: 30px;
+		line-height: 29px;
+	}
+
+	.single h2,
+  .post-type-post h2 {
+		font-size: 21px;
+		line-height: 24px;
+		margin: 24px 0 12px;
+	}
+
+	.single ul,
+  .post-type-post ul {
+		font-size: 17px;
+		line-height: 22px;
+	}
+
+	.single ol,
+  .post-type-post ol {
+		font-size: 17px;
+		line-height: 22px;
+		padding-left: 22px;
+	}
+
+	.single ol li:not(:last-child),
+    .post-type-post ol li:not(:last-child) {
+		margin-bottom: 0;
+	}
+
+	.single p,
+  .post-type-post p {
+		font-size: 17px;
+		line-height: 22px;
+	}
+
+	.single a::before,
+  .post-type-post a::before {
+		width: 17px;
+		height: 17px;
+	}
+
+	.single .telegram a::before,
+  .post-type-post .telegram a::before {
+		width: 23px;
+		height: 20px;
+	}
+
+	.page:not(.home) p {
+		font-size: 17px;
+		line-height: 22px;
+	}
+
+	.page-template-lp main {
+		padding: 16px 0 0 !important;
+	}
+
+	.page-template-lp h2 {
+		font-size: 34px;
+		line-height: 31px;
+	}
+
+	.page-template-lp .lp-buttons {
+		justify-content: center !important;
+	}
+}

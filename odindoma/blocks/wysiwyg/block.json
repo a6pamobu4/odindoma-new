@@ -1,0 +1,32 @@
+{
+    "name": "acf/wysiwyg",
+    "title": "Текст",
+    "description": "Wysiwyg",
+    "style": "file:/wysiwyg.css",
+    "script": "block-wysiwyg",
+    "category": "theme",
+    "icon": "admin-comments",
+    "keywords": ["wysiwyg", "текст"],
+    "supports": {
+        "align": true,
+        "anchor": true,
+        "alignContent": true,
+        "color": {
+            "text": false,
+            "background": true,
+            "link": false
+        },
+        "spacing": {
+            "margin": true,
+            "padding": true,
+            "blockGap": true
+        },
+        "alignText": true,
+        "fullHeight": true
+    },
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "wysiwyg.php"
+    }
+
+}

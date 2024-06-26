@@ -1,0 +1,31 @@
+{
+    "name": "acf/quote",
+    "title": "Quote",
+    "description": "A custom Quote block.",
+    "style": ["file:/quote.css"],
+    "script": ["block-quote"],
+    "category": "theme",
+    "icon": "admin-comments",
+    "keywords": ["quote", "цитата"],
+    "supports": {
+        "align": true,
+        "anchor": true,
+        "alignContent": true,
+        "color": {
+            "text": false,
+            "background": true,
+            "link": false
+        },
+        "spacing": {
+            "margin": true,
+            "padding": true,
+            "blockGap": true
+        },
+        "alignText": true,
+        "fullHeight": true
+    },
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "quote.php"
+    }
+}

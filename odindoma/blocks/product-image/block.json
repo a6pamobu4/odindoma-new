@@ -1,0 +1,31 @@
+{
+    "name": "acf/product-image",
+    "title": "Product with image",
+    "description": "A custom Product with image block.",
+    "style": ["file:/product-image.css"],
+    "script": ["block-product-image"],
+    "category": "theme",
+    "icon": "admin-comments",
+    "keywords": ["product", "image"],
+    "supports": {
+        "align": true,
+        "anchor": true,
+        "alignContent": true,
+        "color": {
+            "text": false,
+            "background": true,
+            "link": false
+        },
+        "spacing": {
+            "margin": true,
+            "padding": true,
+            "blockGap": true
+        },
+        "alignText": true,
+        "fullHeight": true
+    },
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "product-image.php"
+    }
+}

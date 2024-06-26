@@ -1,0 +1,31 @@
+{
+    "name": "acf/table-3-cols",
+    "title": "3 columns table",
+    "description": "A custom 3 columns table block.",
+    "style": ["file:/table-3-cols.css"],
+    "script": ["block-table-3-cols"],
+    "category": "theme",
+    "icon": "admin-comments",
+    "keywords": ["table", "columns"],
+    "supports": {
+        "align": true,
+        "anchor": true,
+        "alignContent": true,
+        "color": {
+            "text": false,
+            "background": true,
+            "link": false
+        },
+        "spacing": {
+            "margin": true,
+            "padding": true,
+            "blockGap": true
+        },
+        "alignText": true,
+        "fullHeight": true
+    },
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "table-3-cols.php"
+    }
+}

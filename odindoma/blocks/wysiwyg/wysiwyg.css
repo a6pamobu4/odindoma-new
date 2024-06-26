@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+.wysiwyg {
+	width: 100%;
+	margin: 0 0 48px;
+}
+
+.wysiwyg h2 {
+	font-family: var(--wp--preset--font-family--loos-wide);
+	font-size: 28px;
+	line-height: 28px;
+	margin: 32px 0 14px;
+	max-width: 645px;
+}
+
+.wysiwyg p {
+	max-width: 645px;
+	font-size: 22px;
+	line-height: 27px;
+	margin: 0 0 14px;
+}
+
+.wysiwyg p:last-child {
+	margin-bottom: 0;
+}
+
+.wysiwyg p a {
+	color: var(--wp--preset--color--just-black);
+}
+
+.wysiwyg p a:visited {
+	color: var(--wp--preset--color--just-black);
+}
+
+.wysiwyg p a:hover {
+	color: #666666;
+}
+
+.wysiwyg p a.with-image::before {
+	content: "";
+	display: inline-block;
+	position: relative;
+	width: 22px;
+	height: 22px;
+	background-image: url(assets/images/emoji-chain.png);
+	background-size: cover;
+}
+
+.wysiwyg ul {
+	font-size: 22px;
+	line-height: 27px;
+	max-width: 571px;
+	padding-left: 24px;
+}
+
+.wysiwyg ul li {
+	display: flex;
+	gap: 5px;
+}
+
+.wysiwyg ul li:before {
+	content: "—";
+	display: inline-block;
+}
+
+.wysiwyg ol {
+	font-size: 22px;
+	line-height: 27px;
+	padding-left: 32px;
+	max-width: 563px;
+	margin-bottom: 14px;
+}
+
+.wysiwyg ol li:not(:last-child) {
+	margin-bottom: 14px;
+}
+
+@media screen and (max-width: 640px) {
+	.wysiwyg h2 {
+		font-size: 21px;
+		line-height: 24px;
+		margin: 24px 0 12px;
+	}
+
+	.wysiwyg ul {
+		font-size: 17px;
+		line-height: 22px;
+	}
+
+	.wysiwyg ol {
+		font-size: 17px;
+		line-height: 22px;
+		padding-left: 22px;
+	}
+
+	.wysiwyg ol li:not(:last-child) {
+		margin-bottom: 0;
+	}
+
+	.wysiwyg p {
+		font-size: 17px;
+		line-height: 22px;
+	}
+}

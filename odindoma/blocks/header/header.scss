@@ -1,0 +1,268 @@
+header {
+  position: fixed;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+
+  .logo {
+    margin: 24px 0 0 24px;
+    line-height: 0;
+    width: 125px;
+    height: auto;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .mobile-main-menu-container {
+      display: none;
+
+      .main-menu {
+        padding: 0;
+        margin: 0;
+
+        .menu-item {
+          a {
+            text-decoration: none;
+            color: var(--wp--preset--color--just-black);
+            font-size: 16px;
+            line-height: 18px;
+
+            &:hover {
+              color: #666666;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 0 0 32px 24px;
+
+    .text {
+      display: none;
+      line-height: 18px;
+    }
+
+    .main-menu-container {
+      .main-menu {
+        padding: 0;
+        margin: 0;
+        font-size: 16px;
+        line-height: 18px;
+
+        .menu-item {
+          a {
+            text-decoration: none;
+            color: var(--wp--preset--color--just-black);
+            font-size: 16px;
+            line-height: 18px;
+
+            &:hover {
+              color: #666666;
+            }
+          }
+        }
+      }
+    }
+
+    .buttons {
+      display: flex;
+      gap: 24px;
+      line-height: 0;
+
+      a:hover {
+        filter: invert(40%) sepia(0%) saturate(0%) hue-rotate(59deg) brightness(97%) contrast(90%);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  header {
+    position: absolute;
+    width: 216px;
+    height: auto;
+    left: unset;
+    top: 0;
+
+    .logo {
+      margin-left: 0;
+      width: 96px;
+    }
+
+    .social-buttons {
+      margin: 24px 0 0;
+
+
+      /*.text {
+        display: flex;
+      }*/
+    }
+  }
+
+  .single,
+  .page:not(.home) {
+    header {
+      position: relative;
+      flex-direction: row;
+      width: 100%;
+
+      .social-buttons {
+        flex-direction: row;
+        gap: 32px;
+        align-items: flex-start;
+        height: fit-content;
+
+        .text {
+          display: none;
+        }
+
+        .main-menu-container {
+          .main-menu {
+            display: flex;
+            gap: 24px;
+          }
+        }
+      }
+    }
+  }
+
+  .page:not(.home) {
+    header {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  header {
+    position: relative;
+    flex-direction: row;
+    width: 100%;
+    left: unset;
+    margin-bottom: 50px;
+
+    .logo {
+      margin: 24px 0 0;
+    }
+
+    .social-buttons {
+      margin: 24px 0 0;
+      flex-direction: row;
+      gap: 32px;
+      align-items: flex-start;
+      height: fit-content;
+
+      .text {
+        display: none;
+      }      
+
+      .buttons {
+        gap: 20px;
+      }
+
+      .main-menu-container {
+        .main-menu {
+          display: flex;
+          gap: 24px;
+        }
+      }
+    }
+  }
+
+  .single {
+    header {
+      margin-bottom: 73px;
+    }
+  }
+
+  .single,
+  .page:not(.home) {
+    header {
+      .logo {
+        .mobile-main-menu-container {
+          display: block;
+          margin-top: 32px;
+
+          .main-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            line-height: 18px;
+
+            li:not(:last-child) {
+              margin-bottom: 7px;
+            }
+          }
+        }
+      }
+
+      .social-buttons {
+        .main-menu-container {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .page:not(.home) {
+    header {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  header {
+    margin-bottom: 24px;
+
+    .logo {
+      .mobile-main-menu-container {
+        display: block;
+        margin-top: 32px;
+
+        .main-menu {
+          display: flex;
+          flex-direction: column;
+          gap: 0;
+          line-height: 18px;
+
+          li:not(:last-child) {
+            margin-bottom: 7px;
+          }
+        }
+      }
+    }
+
+    .social-buttons {
+      .main-menu-container {
+        display: none;
+      }
+    }
+  }
+
+  .single {
+    header {
+      .logo {
+        .mobile-main-menu-container {
+          display: block;
+        }
+      }
+
+      .social-buttons {
+
+        .main-menu-container {
+          display: none;
+        }
+      }
+    }
+  }
+}

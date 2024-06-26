@@ -1,0 +1,32 @@
+{
+    "name": "acf/hero-home",
+    "title": "Hero home",
+    "description": "A custom Hero block.",
+    "style": "file:/hero-home.css",
+    "script": "block-hero-home",
+    "category": "theme",
+    "icon": "admin-comments",
+    "keywords": ["hero", "home"],
+    "supports": {
+        "align": true,
+        "anchor": true,
+        "alignContent": true,
+        "color": {
+            "text": false,
+            "background": true,
+            "link": false
+        },
+        "spacing": {
+            "margin": true,
+            "padding": true,
+            "blockGap": true
+        },
+        "alignText": true,
+        "fullHeight": true
+    },
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "hero-home.php"
+    }
+
+}

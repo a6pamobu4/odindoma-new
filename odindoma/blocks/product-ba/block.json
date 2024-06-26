@@ -1,0 +1,31 @@
+{
+    "name": "acf/product-ba",
+    "title": "Product with before/after",
+    "description": "A custom Product with before/after block.",
+    "style": ["file:/product-ba.css"],
+    "script": ["block-product-ba"],
+    "category": "theme",
+    "icon": "admin-comments",
+    "keywords": ["product", "before", "after"],
+    "supports": {
+        "align": true,
+        "anchor": true,
+        "alignContent": true,
+        "color": {
+            "text": false,
+            "background": true,
+            "link": false
+        },
+        "spacing": {
+            "margin": true,
+            "padding": true,
+            "blockGap": true
+        },
+        "alignText": true,
+        "fullHeight": true
+    },
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "product-ba.php"
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "name": "acf/hero-posts",
+    "title": "Hero posts",
+    "description": "A custom Hero block for posts.",
+    "style": "file:/hero-posts.css",
+    "script": "block-hero-posts",
+    "category": "theme",
+    "icon": "admin-comments",
+    "keywords": ["hero", "post"],
+    "supports": {
+        "align": true,
+        "anchor": true,
+        "alignContent": true,
+        "color": {
+            "text": false,
+            "background": true,
+            "link": false
+        },
+        "spacing": {
+            "margin": true,
+            "padding": true,
+            "blockGap": true
+        },
+        "alignText": true,
+        "fullHeight": true
+    },
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "hero-posts.php"
+    }
+
+}

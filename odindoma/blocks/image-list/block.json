@@ -1,0 +1,31 @@
+{
+    "name": "acf/image-list",
+    "title": "Image with list",
+    "description": "A custom Image with list block.",
+    "style": ["file:/image-list.css"],
+    "script": ["block-image-list"],
+    "category": "theme",
+    "icon": "admin-comments",
+    "keywords": ["image", "list"],
+    "supports": {
+        "align": true,
+        "anchor": true,
+        "alignContent": true,
+        "color": {
+            "text": false,
+            "background": true,
+            "link": false
+        },
+        "spacing": {
+            "margin": true,
+            "padding": true,
+            "blockGap": true
+        },
+        "alignText": true,
+        "fullHeight": true
+    },
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "image-list.php"
+    }
+}

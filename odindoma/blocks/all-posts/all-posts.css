@@ -1,0 +1,244 @@
+.all-posts {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.all-posts .heading {
+	text-transform: uppercase;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 1.12px;
+	border-bottom: 2px solid var(--wp--preset--color--just-black);
+}
+
+.all-posts .posts {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 48px 24px;
+	margin-bottom: 28px;
+}
+
+.all-posts .posts .post {
+	flex: 1;
+	flex-basis: 45%;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	max-width: calc(50% - 12px);
+}
+
+.all-posts .posts .post .image {
+	margin-bottom: 8px;
+}
+
+.all-posts .posts .post .image img {
+	width: calc(100% + 16px);
+	height: auto;
+	margin: -8px;
+}
+
+.all-posts .posts .post h2 {
+	margin: 0;
+}
+
+.all-posts .posts .post h2 .title {
+	text-decoration: none;
+	color: var(--wp--preset--color--just-black);
+	font-family: var(--wp--preset--font-family--loos-wide);
+	font-size: 31px;
+	line-height: 32px;
+	font-weight: 400;
+}
+
+.all-posts .posts .post h2 .title.yellow:hover {
+	color: #705E00;
+}
+
+.all-posts .posts .post h2 .title.pink:hover {
+	color: #860342;
+}
+
+.all-posts .posts .post h2 .title.blue:hover {
+	color: #231995;
+}
+
+.all-posts .posts .post h2 .title.green:hover {
+	color: #077D13;
+}
+
+.all-posts .posts .post h2 .title.fuchsia:hover {
+	color: #770081;
+}
+
+.all-posts .posts .post h2 .title.bright-mint:hover {
+	color: #005732;
+}
+
+.all-posts .posts .post h2 .title.blue-purple:hover {
+	color: #000D84;
+}
+
+.all-posts .posts .post h2 .title.tomato:hover {
+	color: #862203;
+}
+
+.all-posts .posts .post .subtitle {
+	max-width: 351px;
+	line-height: 20px;
+}
+
+.all-posts .posts .post.yellow .image {
+	background-color: var(--wp--preset--color--chicken-yellow);
+}
+
+.all-posts .posts .post.yellow .title:hover {
+	color: #705E00;
+}
+
+.all-posts .posts .post.pink .image {
+	background-color: var(--wp--preset--color--sausages-pink);
+}
+
+.all-posts .posts .post.pink .title:hover {
+	color: #860342;
+}
+
+.all-posts .posts .post.blue .image {
+	background-color: var(--wp--preset--color--cowboy-blue);
+}
+
+.all-posts .posts .post.blue .title:hover {
+	color: #231995;
+}
+
+.all-posts .posts .post.green .image {
+	background-color: var(--wp--preset--color--matcha-green);
+}
+
+.all-posts .posts .post.green .title:hover {
+	color: #077D13;
+}
+
+.all-posts .posts .post.fuchsia .image {
+	background-color: var(--wp--preset--color--fuchsia);
+}
+
+.all-posts .posts .post.fuchsia .title:hover {
+	color: #770081;
+}
+
+.all-posts .posts .post.bright-mint .image {
+	background-color: var(--wp--preset--color--bright-mint);
+}
+
+.all-posts .posts .post.bright-mint .title:hover {
+	color: #005732;
+}
+
+.all-posts .posts .post.blue-purple .image {
+	background-color: var(--wp--preset--color--blue-purple);
+}
+
+.all-posts .posts .post.blue-purple .title:hover {
+	color: #000D84;
+}
+
+.all-posts .posts .post.tomato .image {
+	background-color: var(--wp--preset--color--tomato);
+}
+
+.all-posts .posts .post.tomato .title:hover {
+	color: #862203;
+}
+
+.all-posts .btn-wrapper {
+	text-align: center;
+}
+
+.all-posts .btn-wrapper #load-more {
+	color: var(--wp--preset--color--just-black);
+	border: 2px solid var(--wp--preset--color--just-black);
+	padding: 12px;
+	font-size: 23px;
+	line-height: 22px;
+	font-family: var(--wp--preset--font-family--loos-wide);
+	text-decoration: none;
+}
+
+.all-posts .btn-wrapper #load-more:hover {
+	color: #666666;
+	border-color: #666666;
+}
+
+.all-posts .dot-flashing {
+	position: relative;
+	width: 5px;
+	height: 5px;
+	border-radius: 5px;
+	background-color: #aeaeae;
+	color: #aeaeae;
+	animation: dot-flashing 1s infinite linear alternate;
+	animation-delay: 0.5s;
+	display: inline-block;
+	margin: 0 12px;
+}
+
+.all-posts .dot-flashing::before, .all-posts .dot-flashing::after {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	top: 0;
+}
+
+.all-posts .dot-flashing::before {
+	left: -8px;
+	width: 5px;
+	height: 5px;
+	border-radius: 5px;
+	background-color: #aeaeae;
+	color: #aeaeae;
+	animation: dot-flashing 1s infinite alternate;
+	animation-delay: 0s;
+}
+
+.all-posts .dot-flashing::after {
+	left: 8px;
+	width: 5px;
+	height: 5px;
+	border-radius: 5px;
+	background-color: #aeaeae;
+	color: #aeaeae;
+	animation: dot-flashing 1s infinite alternate;
+	animation-delay: 1s;
+}
+
+@keyframes dot-flashing {
+	0% {
+		background-color: var(--wp--preset--color--just-black);
+	}
+
+	50%, 100% {
+		background-color: #aeaeae;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.all-posts .posts {
+		flex-direction: column;
+		flex-wrap: nowrap;
+		gap: 40px;
+	}
+
+	.all-posts .posts .post {
+		max-width: unset;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.all-posts .posts .post h2 .title {
+		font-size: 23px;
+		line-height: 24px;
+	}
+}

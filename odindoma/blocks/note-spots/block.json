@@ -1,0 +1,31 @@
+{
+    "name": "acf/note-spots",
+    "title": "Note spots",
+    "description": "A custom Note spots block.",
+    "style": ["file:/note-spots.css"],
+    "script": ["block-note-spots"],
+    "category": "theme",
+    "icon": "admin-comments",
+    "keywords": ["note", "spots"],
+    "supports": {
+        "align": true,
+        "anchor": true,
+        "alignContent": true,
+        "color": {
+            "text": false,
+            "background": true,
+            "link": false
+        },
+        "spacing": {
+            "margin": true,
+            "padding": true,
+            "blockGap": true
+        },
+        "alignText": true,
+        "fullHeight": true
+    },
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "note-spots.php"
+    }
+}

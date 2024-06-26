@@ -1,0 +1,32 @@
+{
+    "name": "acf/interval",
+    "title": "Интервал между секциями",
+    "description": "Интервал между секциями",
+    "style": "file:/interval.css",
+    "script": "block-interval",
+    "category": "theme",
+    "icon": "admin-comments",
+    "keywords": ["interval", "интервал"],
+    "supports": {
+        "align": true,
+        "anchor": true,
+        "alignContent": true,
+        "color": {
+            "text": false,
+            "background": true,
+            "link": false
+        },
+        "spacing": {
+            "margin": true,
+            "padding": true,
+            "blockGap": true
+        },
+        "alignText": true,
+        "fullHeight": true
+    },
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "interval.php"
+    }
+
+}

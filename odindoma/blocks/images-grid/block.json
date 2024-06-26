@@ -1,0 +1,32 @@
+{
+    "name": "acf/images-grid",
+    "title": "Изображения",
+    "description": "A custom Images grid.",
+    "style": "file:/images-grid.css",
+    "script": "block-images-grid",
+    "category": "theme",
+    "icon": "admin-comments",
+    "keywords": ["images", "grid", "изображения"],
+    "supports": {
+        "align": true,
+        "anchor": true,
+        "alignContent": true,
+        "color": {
+            "text": false,
+            "background": true,
+            "link": false
+        },
+        "spacing": {
+            "margin": true,
+            "padding": true,
+            "blockGap": true
+        },
+        "alignText": true,
+        "fullHeight": true
+    },
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "images-grid.php"
+    }
+
+}

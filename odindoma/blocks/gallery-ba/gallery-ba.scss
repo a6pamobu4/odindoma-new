@@ -1,0 +1,375 @@
+.gallery-ba {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  gap: 8px;
+
+  .before-after {
+    display: flex;
+    gap: 24px;
+
+    .before {
+      position: relative;
+
+      p {
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0;
+      }
+
+      .image-0 {
+        position: relative;
+        z-index: 1;
+      }
+
+      .image-1,
+      .image-2,
+      .image-3,
+      .image-4,
+      .image-5 {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        left: 0;
+        top: 0;
+      }
+
+      .nav {
+        position: absolute;
+        bottom: 32px;
+        z-index: 3;
+        left: 0;
+        width: calc(100% - 32px);
+        padding: 0 16px;
+        display: flex;
+        gap: 8px;
+
+        .nav-item {
+          height: 2px;
+          flex: 1;
+          opacity: 0.16;
+          background-color: #000;
+        }
+
+        .nav-item-0 {
+          opacity: 1;
+        }
+      }
+    }
+
+    .after {
+      position: relative;
+
+      p {
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0;
+      }
+
+      .image-0 {
+        position: relative;
+        z-index: 1;
+      }
+
+      .image-1,
+      .image-2,
+      .image-3,
+      .image-4,
+      .image-5 {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        left: 0;
+        top: 0;
+      }
+
+      .nav {
+        position: absolute;
+        bottom: 32px;
+        z-index: 3;
+        left: 0;
+        width: calc(100% - 32px);
+        padding: 0 16px;
+        display: flex;
+        gap: 8px;
+
+        .nav-item {
+          height: 2px;
+          flex: 1;
+          opacity: 0.16;
+          background-color: #000;
+        }
+
+        .nav-item-0 {
+          opacity: 1;
+        }
+      }
+    }
+
+    &.show-image-1 {
+      .image-1 {
+        z-index: 2;
+      }
+
+      .nav-item-0 {
+        opacity: 0.16!important;
+      }
+
+      .nav-item-1 {
+        opacity: 1!important;
+      }
+    }
+
+    &.show-image-2 {
+      .image-2 {
+        z-index: 2;
+      }
+
+      .nav-item-0 {
+        opacity: 0.16!important;
+      }
+
+      .nav-item-2 {
+        opacity: 1!important;
+      }
+    }
+
+    &.show-image-3 {
+      .image-3 {
+        z-index: 2;
+      }
+
+      .nav-item-0 {
+        opacity: 0.16!important;
+      }
+
+      .nav-item-3 {
+        opacity: 1!important;
+      }
+    }
+
+    &.show-image-4 {
+      .image-4 {
+        z-index: 2;
+      }
+
+      .nav-item-0 {
+        opacity: 0.16!important;
+      }
+
+      .nav-item-4 {
+        opacity: 1!important;
+      }
+    }
+
+    &.show-image-5 {
+      .image-5 {
+        z-index: 2;
+      }
+
+      .nav-item-0 {
+        opacity: 0.16!important;
+      }
+
+      .nav-item-5 {
+        opacity: 1!important;
+      }
+    }
+  }
+
+  .before-after-mobile {
+    display: none;
+    
+    .before-after-item {
+      flex: 1;
+      position: relative;
+      line-height: 0;
+      display: none;
+
+      .before {
+      }
+
+      .after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        max-width: 100%;
+        height: 100%;
+        background-size: cover;
+        border-right: 4px solid #fff;
+      }
+
+      .slider {
+        position: absolute;
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        height: 100%;
+        background: rgba(#f2f2f2, .3);
+        outline: none;
+        margin: 0;
+        transition: all .2s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        display: none;
+
+        &::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 6px;
+          height: 100%;
+          background: white;
+          cursor: pointer;
+        }
+
+        &::-moz-range-thumb {
+          width: 6px;
+          height: 100%;
+          background: white;
+          cursor: pointer;
+        }
+      }
+
+      .slider-button {
+        $size: 30px;
+        pointer-events: none;
+        position: absolute;
+        width: $size;
+        height: $size;
+        border-radius: 50%;
+        background-color: white;
+        left: calc(50% - 13px);
+        top: calc(50% - 15px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        &:after {
+          content: '';
+          padding: 3px;
+          display: inline-block;
+          border: solid #5D5D5D;
+          border-width: 0 2px 2px 0;
+          transform: rotate(-45deg);
+        }
+
+        &:before {
+          content: '';
+          padding: 3px;
+          display: inline-block;
+          border: solid #5D5D5D;
+          border-width: 0 2px 2px 0;
+          transform: rotate(135deg);
+        }
+      }
+    }
+
+    .nav {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+
+      .nav-image {
+        width: 62px;
+        height: 62px;
+        cursor: pointer;
+      }
+    }
+
+    &.show-image-0 {
+      .before-after-item {
+        &.image-0 {
+          display: block;
+        }
+      }
+
+      .nav {
+        .nav-image-0 {
+          opacity: 0.2;
+        }
+      }
+    }
+
+    &.show-image-1 {
+      .before-after-item {
+        &.image-1 {
+          display: block;
+        }
+      }
+
+      .nav {
+        .nav-image-1 {
+          opacity: 0.2;
+        }
+      }
+    }
+
+    &.show-image-2 {
+      .before-after-item {
+        &.image-2 {
+          display: block;
+        }
+      }
+
+      .nav {
+        .nav-image-2 {
+          opacity: 0.2;
+        }
+      }
+    }
+
+    &.show-image-3 {
+      .before-after-item {
+        &.image-3 {
+          display: block;
+        }
+      }
+
+      .nav {
+        .nav-image-3 {
+          opacity: 0.2;
+        }
+      }
+    }
+
+    &.show-image-4 {
+      .before-after-item {
+        &.image-4 {
+          display: block;
+        }
+      }
+
+      .nav {
+        .nav-image-4 {
+          opacity: 0.2;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+}
+
+@media screen and (max-width: 640px) {
+  .gallery-ba {
+    .before-after {
+      display: none;
+    }
+
+    .before-after-mobile {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+}

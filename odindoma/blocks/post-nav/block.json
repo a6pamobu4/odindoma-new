@@ -1,0 +1,31 @@
+{
+    "name": "acf/post-nav",
+    "title": "Post nav",
+    "description": "A custom Post navigation block.",
+    "style": ["file:/post-nav.css"],
+    "script": ["block-post-nav"],
+    "category": "theme",
+    "icon": "admin-comments",
+    "keywords": ["post", "navigation"],
+    "supports": {
+        "align": true,
+        "anchor": true,
+        "alignContent": true,
+        "color": {
+            "text": false,
+            "background": true,
+            "link": false
+        },
+        "spacing": {
+            "margin": true,
+            "padding": true,
+            "blockGap": true
+        },
+        "alignText": true,
+        "fullHeight": true
+    },
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "post-nav.php"
+    }
+}

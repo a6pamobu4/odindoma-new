@@ -1,0 +1,31 @@
+{
+    "name": "acf/marquee-images",
+    "title": "Images marquee carousel",
+    "description": "A custom Images marquee carousel block.",
+    "style": ["file:/marquee-images.css"],
+    "script": ["block-marquee-images"],
+    "category": "theme",
+    "icon": "admin-comments",
+    "keywords": ["marquee", "images", "carousel"],
+    "supports": {
+        "align": true,
+        "anchor": true,
+        "alignContent": true,
+        "color": {
+            "text": false,
+            "background": true,
+            "link": false
+        },
+        "spacing": {
+            "margin": true,
+            "padding": true,
+            "blockGap": true
+        },
+        "alignText": true,
+        "fullHeight": true
+    },
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "marquee-images.php"
+    }
+}

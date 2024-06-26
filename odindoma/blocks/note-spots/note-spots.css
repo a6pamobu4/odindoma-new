@@ -1,0 +1,63 @@
+.note-spots {
+	display: flex;
+	width: 100%;
+	max-width: 468px;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.note-spots .heading {
+	text-transform: uppercase;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0.08em;
+	border-bottom: 2px solid var(--wp--preset--color--just-black);
+	margin-bottom: 0;
+}
+
+.note-spots .heading img {
+	width: 14px;
+	margin-bottom: -2px;
+}
+
+.note-spots .rows {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.note-spots .rows .row {
+	display: flex;
+	gap: 16px;
+}
+
+.note-spots .rows .row .text-left {
+	max-width: 66px;
+	display: flex;
+	flex: 1;
+	gap: 3px;
+}
+
+.note-spots .rows .row .text-left img {
+	height: 16px;
+	width: auto;
+}
+
+.note-spots .rows .row .text-left.gray span {
+	opacity: 0.4;
+}
+
+.note-spots .rows .row .text-right {
+	flex: 1;
+}
+
+@media screen and (max-width: 640px) {
+	.note-spots .heading {
+		font-size: 12px;
+	}
+
+	.note-spots .rows .row {
+		font-size: 14px;
+		line-height: 18px;
+	}
+}

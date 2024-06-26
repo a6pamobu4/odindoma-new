@@ -1,0 +1,31 @@
+{
+    "name": "acf/featured-products",
+    "title": "Featured products",
+    "description": "A custom Featured products block.",
+    "style": ["file:/featured-products.css", "file:../../assets/lib/swiper/swiper-bundle.min.css"],
+    "script": ["block-featured-products", "swiper"],
+    "category": "theme",
+    "icon": "admin-comments",
+    "keywords": ["featured products"],
+    "supports": {
+        "align": true,
+        "anchor": true,
+        "alignContent": true,
+        "color": {
+            "text": false,
+            "background": true,
+            "link": false
+        },
+        "spacing": {
+            "margin": true,
+            "padding": true,
+            "blockGap": true
+        },
+        "alignText": true,
+        "fullHeight": true
+    },
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "featured-products.php"
+    }
+}

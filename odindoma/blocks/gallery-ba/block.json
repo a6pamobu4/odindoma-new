@@ -1,0 +1,31 @@
+{
+    "name": "acf/gallery-ba",
+    "title": "Before/after gallery",
+    "description": "A custom Before/after gallery block.",
+    "style": ["file:/gallery-ba.css"],
+    "script": ["block-gallery-ba"],
+    "category": "theme",
+    "icon": "admin-comments",
+    "keywords": ["gallery", "before", "after"],
+    "supports": {
+        "align": true,
+        "anchor": true,
+        "alignContent": true,
+        "color": {
+            "text": false,
+            "background": true,
+            "link": false
+        },
+        "spacing": {
+            "margin": true,
+            "padding": true,
+            "blockGap": true
+        },
+        "alignText": true,
+        "fullHeight": true
+    },
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "gallery-ba.php"
+    }
+}

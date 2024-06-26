@@ -1,0 +1,31 @@
+{
+    "name": "acf/product-grid",
+    "title": "Product grid",
+    "description": "A custom Product grid block.",
+    "style": ["file:/product-grid.css"],
+    "script": ["block-product-grid"],
+    "category": "theme",
+    "icon": "admin-comments",
+    "keywords": ["product", "grid"],
+    "supports": {
+        "align": true,
+        "anchor": true,
+        "alignContent": true,
+        "color": {
+            "text": false,
+            "background": true,
+            "link": false
+        },
+        "spacing": {
+            "margin": true,
+            "padding": true,
+            "blockGap": true
+        },
+        "alignText": true,
+        "fullHeight": true
+    },
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "product-grid.php"
+    }
+}

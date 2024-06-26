@@ -1,0 +1,31 @@
+{
+    "name": "acf/gallery",
+    "title": "Gallery",
+    "description": "A custom Gallery block.",
+    "style": ["file:/gallery.css"],
+    "script": ["block-gallery"],
+    "category": "theme",
+    "icon": "admin-comments",
+    "keywords": ["gallery"],
+    "supports": {
+        "align": true,
+        "anchor": true,
+        "alignContent": true,
+        "color": {
+            "text": false,
+            "background": true,
+            "link": false
+        },
+        "spacing": {
+            "margin": true,
+            "padding": true,
+            "blockGap": true
+        },
+        "alignText": true,
+        "fullHeight": true
+    },
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "gallery.php"
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "name": "acf/footer",
+    "title": "Footer",
+    "description": "A custom Footer block.",
+    "style": "file:/footer.css",
+    "script": "block-footer",
+    "category": "theme",
+    "icon": "admin-comments",
+    "keywords": ["footer"],
+    "supports": {
+        "align": true,
+        "anchor": true,
+        "alignContent": true,
+        "color": {
+            "text": false,
+            "background": true,
+            "link": false
+        },
+        "spacing": {
+            "margin": true,
+            "padding": true,
+            "blockGap": true
+        },
+        "alignText": true,
+        "fullHeight": true
+    },
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "footer.php"
+    }
+
+}
